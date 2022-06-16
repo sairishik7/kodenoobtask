@@ -14,17 +14,19 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    flatDir {
+        dirs("libs/")
+    }
 }
 
 dependencies {
-    // Use JUnit test framework.
-    testImplementation("junit:junit:4.13.2")
-
-    // This dependency is used by the application.
-    implementation("com.google.guava:guava:30.1.1-jre")
+    implementation("junit:junit:4.13.2")
+    implementation("org.apache.httpcomponents.client5:httpclient5:5.1.3")
+    implementation("com.google.code.gson:gson:2.9.0")
+    implementation(files("libs/kodenoobsjudge-0.1.0.jar"))
 }
 
 application {
     // Define the main class for the application.
-    mainClass.set("com.kodenoob.hiring.App")
+    mainClass.set("com.kodenoobs.hiring.Task1SubmissionRunner")
 }
