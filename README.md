@@ -31,8 +31,8 @@ This is Codebase for submitting the Tech Task for hiring.kodenoobs.com platform.
 
 # What you would need to do:
 
-1. Install JAVA in your local enviroment. 
-2. Add your github ID on Task1SubmissionRunner.main function
+1. Install JAVA 8 in your local environment. 
+2. Add your GITHUB ID and JOB ID on UserInput class.
 3. Implement ResultBuilder.buildResult function. 
 4. Make sure all Test in ResultBuilderTest are passing.
         
