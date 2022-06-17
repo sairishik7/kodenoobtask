@@ -15,11 +15,19 @@ public class Task1SubmissionRunner {
         // Enter your personal Github Id:
         String githubId = "";
 
+        // Enter your Job Id:
+        String jobId = "";
+
         if(githubId == null || githubId.trim() == "") {
             throw new RuntimeException("Please enter your personal github id.");
         }
 
-        RemoteJudge remoteJudge = new RemoteJudge<StudentGroup, Result>(StudentGroup.class, githubId);
+        if(jobId == null || jobId.trim() == "") {
+            throw new RuntimeException("Please enter your Job ID id.");
+        }
+
+
+        RemoteJudge remoteJudge = new RemoteJudge<StudentGroup, Result>(StudentGroup.class, githubId, jobId);
         StudentGroup input = (StudentGroup) remoteJudge.getInput(JAVA_TASK_1);
         remoteJudge.validate(JAVA_TASK_1, new ResultBuilder().buildResult(input));
 
